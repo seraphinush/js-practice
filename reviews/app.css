@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 * {
   box-sizing: border-box;
@@ -33,7 +34,7 @@ h1 {
   width: 400px;
   background-color: #FFF;
   border-radius: 5px;
-  box-shadow: 0 0 10px 2px #00000033;
+  box-shadow: 0 5px 10px 2px #00000033;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -51,19 +52,31 @@ h1 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: 1;
   box-shadow: 0 5px 5px 1px #ff80aacc;
+}
+
+.review__image::after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  margin-top: -75px;
+  margin-left: -140px;
+  background: #ff80aa url("./img/apostrophe.png") center;
+  background-size: contain;
 }
 
 .review__image > img {
   width: 100%;
   height: 100%;
-  z-index: 2;
 }
 
 .review__comment {
   margin-top: 2rem;
   color: #222;
+  line-height: 1.3rem;
 }
 
 .review__name {
@@ -71,9 +84,9 @@ h1 {
 }
 
 .review__job {
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   letter-spacing: 2px;
-  color: #6666FF;
+  color: #6666ff;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -98,10 +111,11 @@ h1 {
   content: "";
   display: block;
   height: 0.5rem;
-  border-right: 2px solid #6666FF;
+  border-right: 2px solid #6666ff;
   position: absolute;
   margin-top: -6px;
   margin-left: 2.8px;
+  transition: 200ms;
 }
 
 .prev > span::after,
@@ -109,10 +123,11 @@ h1 {
   content: "";
   display: block;
   height: 0.5rem;
-  border-right: 2px solid #6666FF;
+  border-right: 2px solid #6666ff;
   position: absolute;
   margin-top: -1.5px;
   margin-left: 2.8px;
+  transition: 200ms;
 }
 
 .next > span::before,
@@ -125,4 +140,11 @@ h1 {
 .prev > span::after {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+}
+
+.prev:hover > span::before,
+.next:hover > span::before,
+.prev:hover > span::after,
+.next:hover > span::after {
+  border-right: 2px solid #ff80aa;
 }

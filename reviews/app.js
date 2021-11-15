@@ -27,7 +27,7 @@ const reviews = [
     comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     imageUrl: "./img/4.png"
   }
-]
+];
 
 const nameEl = document.getElementById("name");
 const jobEl = document.getElementById("job");
