@@ -5,3 +5,4 @@ Repository of simple projects to practice JavaScript
 - Change background
 - Counter
 - Reviews
+- Menu
