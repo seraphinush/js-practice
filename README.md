@@ -6,3 +6,4 @@ Repository of simple projects to practice JavaScript
 - Counter
 - Reviews
 - Menu
+- Modal
