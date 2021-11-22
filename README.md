@@ -1,4 +1,4 @@
-# practice-js
+# js-practice
 Repository of simple projects to practice JavaScript
 
 ## Projects
@@ -7,3 +7,4 @@ Repository of simple projects to practice JavaScript
 - Reviews
 - Menu
 - Modal
+- Questions
