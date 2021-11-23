@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+  background-color: rgb(235, 249, 255);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  line-height: 1.625em;
+}
+
+.card {
+  margin: 1rem;
+  width: 700px;
+  box-shadow: 0 5px 10px 2px #0003;
+  border-radius: 5px;
+}
+
+.card__question {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__answer {
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  padding: 0rem 1.5rem;
+  transition: height 150ms ease-out, padding 150ms ease-out;
+}
+
+.card__answer::before {
+  content: "";
+  display: none;
+  position: absolute;
+  margin-top: -1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 1px;
+  width: 500px;
+  border-top: 1px solid #6666ff;
+  opacity: 0;
+  transition: opacity 0 linear 150ms;
+}
+
+button {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  width: fit-content;
+  border: 2px solid #6666ff;
+  border-radius: 5px;
+  color: #6666ff;
+  transition: transform 300ms ease-out;
+}
+
+button:hover {
+  transform: rotate(180deg);
+}
+
+button>span {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.minus-icon {
+  display: none;
+}
+
+.minus-icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #6666ff;
+}
+
+.plus-icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #6666ff;
+}
+
+.plus-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #6666ff;
+  transform: rotate(90deg);
+}
+
+.card__open .card__answer {
+  height: 100%;
+  padding: 1.5rem 1.5rem;
+}
+
+.card__open .card__answer::before {
+  opacity: 1;
+}
+
+.card__open .plus-icon {
+  display: none;
+}
+
+.card__open .minus-icon {
+  display: flex;
+}
+
+.spacer {
+  width: 100%;
+  height: 1rem;
+}
